@@ -45,16 +45,59 @@ namespace TechJobsOO
         }
         public override string ToString()
         {
-            string notAvailable = " “Data not available” ";
-            string jobToString = "";//will update below in if/else
+            string dataNotAvlb = "Data not available";
+            string toString = "";
+            if ((Name == null || Name.Trim() == "") && (EmployerName == null || EmployerName.ToString().Trim() == "") && (EmployerLocation == null || EmployerLocation.ToString().Trim() == "") &&
+                (JobType == null || JobType.ToString().Trim() == "") && (JobCoreCompetency == null || JobCoreCompetency.ToString().Trim() == ""))
+            {
+                return "OOPS! This job does not seem to exist.";
+            }
+
+            toString += "ID: " + Id + "\n";
             if (Name == null || Name.Trim() == "")
             {
-                return notAvailable;
+                toString += "Name: " + dataNotAvlb + "\n";
             }
             else
             {
-                return jobToString;
+                toString += "Name: " + Name + "\n";
             }
+
+            if (EmployerName == null || EmployerName.ToString().Trim() == "")
+            {
+                toString += "Employer: " + dataNotAvlb + "\n";
+            }
+            else
+            {
+                toString += "Employer: " + EmployerName.ToString().Trim() + "\n";
+            }
+
+            if (EmployerLocation == null || EmployerLocation.ToString().Trim() == "")
+            {
+                toString += "Location: " + dataNotAvlb + "\n";
+            }
+            else
+            {
+                toString += "Location: " + EmployerLocation.ToString().Trim() + "\n";
+            }
+            if (JobType == null || JobType.ToString().Trim() == "")
+            {
+                toString += "Position Type: " + dataNotAvlb + "\n";
+            }
+            else
+            {
+                toString += "Position Type: " + JobType.ToString() + "\n";
+            }
+            if (JobCoreCompetency == null || JobCoreCompetency.ToString().Trim() == "")
+            {
+                toString += "Core Competency: " + dataNotAvlb;
+            }
+            else
+            {
+                toString += "Core Competency: " + JobCoreCompetency.ToString() + "\n";
+            }
+
+            return toString;
         }
     }
 }
