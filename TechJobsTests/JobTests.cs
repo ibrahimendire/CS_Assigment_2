@@ -27,7 +27,7 @@ namespace TechJobsTests
             Assert.AreEqual("ACME", job4.EmployerName.Value);
             Assert.AreEqual("Dessert", job4.EmployerLocation.Value);
             Assert.AreEqual("Quality Control", job4.JobType.Value);
-            Assert.AreEqual("Persistence", job4.JobCoreCompetency.value);
+            Assert.AreEqual("Persistence", job4.JobCoreCompetency.Value);
         }
         [TestMethod]
         public void TestJobsForEquality()
