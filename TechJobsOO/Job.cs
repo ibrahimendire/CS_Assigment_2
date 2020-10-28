@@ -28,9 +28,7 @@ namespace TechJobsOO
             JobCoreCompetency = jobCoreCompetency;
         }
 
-        // TODO: Generate Equals() and GetHashCode() methods.
-
-
+  
         public override bool Equals(object obj)
         {
             return obj is Job job &&
@@ -63,6 +61,8 @@ namespace TechJobsOO
                 toString += "Name: " + Name + "\n";
             }
 
+
+
             if (EmployerName == null || EmployerName.ToString().Trim() == "")
             {
                 toString += "Employer: " + dataNotAvlb + "\n";
@@ -72,6 +72,7 @@ namespace TechJobsOO
                 toString += "Employer: " + EmployerName.ToString().Trim() + "\n";
             }
 
+
             if (EmployerLocation == null || EmployerLocation.ToString().Trim() == "")
             {
                 toString += "Location: " + dataNotAvlb + "\n";
@@ -80,6 +81,8 @@ namespace TechJobsOO
             {
                 toString += "Location: " + EmployerLocation.ToString().Trim() + "\n";
             }
+
+
             if (JobType == null || JobType.ToString().Trim() == "")
             {
                 toString += "Position Type: " + dataNotAvlb + "\n";
@@ -88,6 +91,8 @@ namespace TechJobsOO
             {
                 toString += "Position Type: " + JobType.ToString() + "\n";
             }
+
+
             if (JobCoreCompetency == null || JobCoreCompetency.ToString().Trim() == "")
             {
                 toString += "Core Competency: " + dataNotAvlb;
